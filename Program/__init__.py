@@ -52,7 +52,7 @@ class WithPaste(object):
                 text = self.text_file[self.index].replace("\n", "").replace("\r\n", "")
                 pyperclip.copy(text)
                 
-                logger.info(f"{bcolors.WARNING}Listener: {self.index}{bcolors.ORIGINAL} - {bcolors.WARNING}{text}{bcolors.ORIGINAL}copied.")
+                logger.info(f"{bcolors.WARNING}Listener: {self.index}{bcolors.ORIGINAL} - {bcolors.WARNING}{text} {bcolors.ORIGINAL}copied.")
                 self.index+=1
             else:
                 logger.info(f"{bcolors.WARNING}Listener{bcolors.ORIGINAL} Terminated. Press ctrl + c in the terminal to skip.")
@@ -65,7 +65,7 @@ class WithPaste(object):
                 text = self.text_file[self.index-1].replace("\n", "").replace("\r\n", "")
                 pyperclip.copy(text)
                 
-                logger.info(f"{bcolors.WARNING}Listener: {self.index-1}{bcolors.ORIGINAL} - {bcolors.WARNING}{text}{bcolors.ORIGINAL}copied (Back).")
+                logger.info(f"{bcolors.WARNING}Listener: {self.index-1}{bcolors.ORIGINAL} - {bcolors.WARNING}{text} {bcolors.ORIGINAL}copied (Back).")
                                 
                         
     def paste_thread(self):
