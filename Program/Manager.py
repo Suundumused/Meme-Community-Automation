@@ -40,7 +40,7 @@ def writeLine_to_file(a_string:str):
         with io.open(get_current_directory(args=("Data", "values.txt")), encoding="utf-8", mode="a", newline="") as text_file:
             text_file.write(f"{replace_key_words(a_string)}\n")
         
-        logger.info(f"{bcolors.WARNING}Manager - {a_string} copied.{bcolors.ORIGINAL}")
+        logger.info(f"{bcolors.WARNING}Manager{bcolors.ORIGINAL} - {a_string} copied.")
         
     except Exception as ex:
         logger.error(f"{bcolors.WARNING}Manager{bcolors.ORIGINAL} - {bcolors.FAIL}{arg_message(ex)}{bcolors.ORIGINAL}")
