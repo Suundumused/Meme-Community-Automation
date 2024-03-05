@@ -1,5 +1,6 @@
 def arg_message(args):
     try:
-        return args[len(args)-1]
+        if len(args) > 0:
+            return args[-1]
     except:
         return args
